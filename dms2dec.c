@@ -95,8 +95,9 @@ int main(int argc, char *argv[])
     dec = degree + convert_mins(min) + convert_secs(sec) ;
 
     /* Output results */
-    printf( "%i degrees %i minutes and %.2f seconds converts to %.5f degrees decimal\n",
-            (int)degree, (int)min, sec, dec) ;
+    printf( "Input: %i deg %i' %.2f\"\n", (int)degree, (int)min, sec ) ;
+    printf( "--------------------------------------\n" ) ;
+    printf( "Decimal Degrees: %.5f\n", dec ) ;
 
     return 0 ;
 } /* End of Main */

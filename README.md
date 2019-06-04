@@ -1,10 +1,10 @@
 # Utilities
 
-This repo holds several utility programs that a small simple (_even trivial_) programs that perform various tasks.  Explainations of each are outlined below.
+This repo holds several utility programs that are small, simple (_trivial even_) programs used to perform various tasks.  Explainations of each are outlined below.
 
 ## Convert HTML
 
-<u>Included Files</u>:
+<u>**Included Files**</u>:
 
 1. convert.sh
 
@@ -14,7 +14,7 @@ This is a very simplistic shell script that runs against an HTML report file cre
 
 ## Latitude/Longitude Converter
 
-<u>Included Files</u>:
+<u>**Included Files**</u>:
 
 1. dms2dec.c
 
@@ -24,7 +24,7 @@ Currently, this is a lone source file that can be compiled by itself.  It is a v
 
 ## Exfil Application
 
-<u>Included Files</u>:
+<u>**Included Files**</u>:
 
 1. utils.h  
 1. utils.c  
@@ -41,7 +41,7 @@ Currently, this is a lone source file that can be compiled by itself.  It is a v
 
 ### Pseudo Code
 
-<u>Reading List:</u>
+<u>**Reading List:**</u>
 
 <pre>
 Open file: 
@@ -52,7 +52,7 @@ Open file:
 Close file  
 </pre>
 
-<u>Encode/Encrypt:</u>
+<u>**Encode/Encrypt:**</u>
 
 **input**: line read from file, encode key value    
 
@@ -62,7 +62,7 @@ until EOL read char
     return string  
 </pre>
 
-<u>Connect to remote server:</u>
+<u>**Connect to remote server:**</u>
 
 <pre>
 Open connection  

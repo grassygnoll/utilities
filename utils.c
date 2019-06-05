@@ -47,16 +47,33 @@ int get_line(FILE* inFile, char* lineBuf)
 /******************************************************************************/
 char caesar_encode(char inChar, int shiftKey)
 {
-    char x = '!' ;
+    char x ;
 
-    if(inChar >= 65 && inChar <= 90)
-        printf( "Shift %c by: %i\n", inChar, shiftKey ) ;
-    else if(inChar >= 97 && inChar <= 122)
-        printf( "Shift %c by: %i\n", inChar, shiftKey ) ;
+    if(inChar >= UPPER_FLOOR && inChar <= UPPER_CEIL)
+    {
+        if( (inChar + shiftKey) > UPPER_CEIL )
+            x = (UPPER_FLOOR - 1) + ((inChar + shiftKey) % UPPER_CEIL) ;
+        else
+            x = inChar + shiftKey ;
+
+        // Debug print
+        printf( "Shift %c by: %i\tResult: %c\n", inChar, shiftKey, x ) ;
+    }
+    else if(inChar >= LOWER_FLOOR && inChar <= LOWER_CEIL)
+    {
+        if( (inChar + shiftKey) > LOWER_CEIL ) 
+            x = (LOWER_FLOOR - 1) + ((inChar + shiftKey) % LOWER_CEIL) ;
+        else
+            x = inChar + shiftKey ;
+
+        // Debug print
+        printf( "Shift %c by: %i\tResult: %c\n", inChar, shiftKey, x ) ;
+    }
     else
     {
-        printf( "No shift\n" ) ;
         x = inChar ;
+        // Debug print
+        printf( "No shift\tResult: %c\n", x ) ;
     }
 
     return x ;
